@@ -32,7 +32,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Android Distribution</SidebarGroupLabel>
+          <SidebarGroupLabel>Tauri Vite</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
