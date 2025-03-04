@@ -1,7 +1,6 @@
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -11,7 +10,6 @@ import {
 } from "@/components/ui/sidebar";
 
 import { Home, Inbox } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
 
 // Menu items.
 const items = [
@@ -49,9 +47,6 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-        <ModeToggle />
-      </SidebarFooter>
     </Sidebar>
   );
 }

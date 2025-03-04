@@ -47,14 +47,14 @@ button {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  @apply border-muted-foreground bg-muted;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  @apply outline-none ring-2 ring-ring ring-offset-2;
 }
 
 @media (prefers-color-scheme: light) {
