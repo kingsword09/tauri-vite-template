@@ -1,12 +1,19 @@
 import { useTheme } from "@/components/providers/theme-provider";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { invoke } from "@tauri-apps/api/core";
 import { Moon, Sun } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 
 export const ModeToggle = React.forwardRef<React.ComponentRef<typeof Button>, React.ComponentProps<typeof Button>>(
   ({ className, ...props }, ref) => {
     const { setTheme, theme } = useTheme();
+
+    useEffect(() => {
+      invoke("set_window_theme", {
+        theme,
+      });
+    }, [theme]);
 
     return (
       <Button
